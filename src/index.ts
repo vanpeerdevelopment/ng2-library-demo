@@ -1,4 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SampleComponent } from './sample.component';
 import { LibraryComponent } from './library-component.component';
@@ -13,7 +14,8 @@ export * from './sample.service';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [
     SampleComponent,

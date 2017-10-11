@@ -6,18 +6,18 @@ import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { SampleModule }  from 'ng2-library-demo';
+import { Ng2LibraryDemoModule }  from 'ng2-library-demo';
 
 @Component({
   selector: 'app',
-  template: `<sample-component></sample-component>`
+  template: `<sample-component></sample-component> <lib-comp [opts]="['pls', 'werk', 'nu']"></lib-comp>`
 })
 class AppComponent {}
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  imports: [ BrowserModule, Ng2LibraryDemoModule ]
 })
 class AppModule {}
 
