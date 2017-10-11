@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SampleComponent } from './sample.component';
+import { LibraryComponent } from './library-component.component';
 import { SampleDirective } from './sample.directive';
 import { SamplePipe } from './sample.pipe';
 import { SampleService } from './sample.service';
@@ -16,11 +17,13 @@ export * from './sample.service';
   ],
   declarations: [
     SampleComponent,
+    LibraryComponent,
     SampleDirective,
     SamplePipe
   ],
   exports: [
     SampleComponent,
+    LibraryComponent,
     SampleDirective,
     SamplePipe
   ]
