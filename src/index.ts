@@ -25,10 +25,10 @@ export * from './sample.service';
     SamplePipe
   ]
 })
-export class SampleModule {
+export class Ng2LibraryDemoModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SampleModule,
+      ngModule: Ng2LibraryDemoModule,
       providers: [SampleService]
     };
   }
