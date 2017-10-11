@@ -1,0 +1,28 @@
+{
+  "name": "ng2-library-demo",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanpeerdevelopment/ng2-library-demo"
+  },
+  "author": {
+    "name": "Dieter Van Peer",
+    "email": "dieter@vanpeerdevelopment.be"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanpeerdevelopment/ng2-library-demo/issues"
+  },
+  "main": "ng2-library-demo.umd.js",
+  "module": "ng2-library-demo.js",
+  "jsnext:main": "ng2-library-demo.js",
+  "typings": "ng2-library-demo.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
