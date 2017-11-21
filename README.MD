@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ng2-library-demo';
+import { Ng2LibraryDemoModule } from 'ng2-library-demo';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { SampleModule } from 'ng2-library-demo';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    Ng2LibraryDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
