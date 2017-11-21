@@ -71,9 +71,9 @@
 
 - [x] Change name of lib
 - [ ] Prune
-- [ ] Add demo component (angular-forms)
+- [x] Add demo component (angular-forms)
 - [ ] Jenkins pipeline met job-dsl (nexus, cdn, version?)
-- [ ] Test nexus version in demo client
+- [x] Test nexus version in demo client
 - [ ] Configure lint
 - [ ] Configure tests
 
