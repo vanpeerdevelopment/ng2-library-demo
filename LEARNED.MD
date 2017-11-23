@@ -16,7 +16,8 @@
 1. Add all dependencies of the library as `peerDependency` in `src/package.json` to give the users of the library the freedom to choose the exact version of e.g. `@angular/forms` themselves
 2. When adding a module dependency don't forgot to `import` it in `src/index.ts` and add it to the list of `imports`
 3. When using the library in a client application make sure to also `npm install --save` these `peerDepenencies` as real dependencies. It is not necessary to import these dependencies in the client application.
-4. When using the library in `npm run playground` make sure to add the `peerDependencies` as `devDependencies` to the `package.json` at the root.
+4. When using the library in `npm run playground` make sure to add the `peerDependencies` as `devDependencies` to the `package.json` at the root.  
+   When you get errors starting playground indicating that a library can not be found check whether it is configured in `playground/systemjs.config.js`.
 
 ### Rename module
 - Rename `SampleModule` in `src/index.ts` to `Ng2LibraryDemoModule` 
@@ -51,6 +52,16 @@
   * Generated because `skipTemplateCodegen` is true in `src/tsconfig.es5.json`
 
 ## [Client](https://github.com/vanpeerdevelopment/ng2-library-client-demo)
+- Project generated using [angular-cli](https://github.com/angular/angular-cli)
+- Install the library using npm to make use of the library component:
+  * `npm install ng2-library-demo --save`
+  * `npm install --save` all `peerDepenencies` of the library, e.g. `@angular/forms`  
+    Not necessary to import these dependencies in the client application if not explicitly needed by the client application. 
+    The library will import these dependencies itself.  
+- Import the library module in the client angular application's `AppModule`:  
+  * `import { Ng2LibraryDemoModule } from 'ng2-library-demo';`
+  * add `Ng2LibraryDemoModule.forRoot()` to`imports`
+- Use the components, directives, pipes, services defined in the library
 
 ## Links
 - [Angular 2 library yeoman generator](https://github.com/jvandemo/generator-angular2-library)
@@ -60,29 +71,3 @@
 - [Distributing an Angular Library](http://blog.mgechev.com/2017/01/21/distributing-an-angular-library-aot-ngc-types/)
 - [Module best practicecs](https://github.com/mattdesl/module-best-practices)
 - [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/)
-
-## To Do
-- [ ] Go through generated files and document + go through https://github.com/jvandemo/generator-angular2-library + list things to prune
-- [ ] Check library for unused generated stuff and prune, e.g. travis, docs, samples, ...
-- [ ] Document client lib
-- [x] Document change name of library in `index.ts`, playground and in readme
-- [ ] Check git logs for mistakes in client
-- [ ] Check git logs for mistakes in library
-
-- [x] Change name of lib
-- [ ] Prune
-- [x] Add demo component (angular-forms)
-- [ ] Jenkins pipeline met job-dsl (nexus, cdn, version?)
-- [x] Test nexus version in demo client
-- [ ] Configure lint
-- [ ] Configure tests
-
-- [ ] Setup documentation module with documentation component
-- [ ] Separate nexus, cdn entry
-- [ ] Include documentation umd bundle and dependencies from cdn on http://swo.ops.vdab.be/huisstijl
-- [ ] Try to use it in `<script>`, e.g. for documentation
-- [ ] rollup:umd No name was provided for external module '@angular/core' in options.globals - guessing 'core' (umd naming problem)
-
-- [ ] Deployment diagram for [huisstijl](jenkins-delivery.vdab.be:8080/job/huisstijl) and [huisstijl-angular](jenkins-delivery.vdab.be:8080/job/huisstijl-angular)
-- [ ] Go over todos in [huisstijl-angular](http://git.ops.vdab.be/vdab/huisstijl-angular/blob/53020e444d8435f0083d976d94031969634a2ed1/README.md)
-
